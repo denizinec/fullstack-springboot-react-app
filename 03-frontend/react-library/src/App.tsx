@@ -3,6 +3,7 @@ import './App.css';
 import { Navbar } from './layouts/navbarAndfooter/Navbar';
 import { ExploreTopBooks } from './layouts/homepage/ExploreTopBooks';
 import { Carousel } from './layouts/homepage/Carousel';
+import { Heros } from './layouts/homepage/Heros';
 
 export const App = () => {
   return (
@@ -10,6 +11,7 @@ export const App = () => {
     <Navbar/>
     <ExploreTopBooks/>
     <Carousel/>
+    <Heros/>
     </div>
   );
 }
