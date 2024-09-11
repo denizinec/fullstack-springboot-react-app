@@ -8,6 +8,12 @@
     height: 25em !important;
 }
 
+.loading {
+    display: flex;
+    justify-content: center;
+    padding-left: 7rem;
+}
+
 .dark-overlay {
     background-color: rgba(0, 0, 0, 0.35);
     position: absolute;
