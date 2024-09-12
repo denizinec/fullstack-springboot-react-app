@@ -6,6 +6,7 @@ import { Homepage } from './layouts/homepage/Homepage';
 import { SearchBooks } from './layouts/SearchBooks/SearchBooks';
 import { Redirect, Route, Switch } from 'react-router-dom';
 import { BookCheckOut } from './layouts/BookCheckOut/BookCheckOut';
+import { StarsReview } from './layouts/utils/StarsReview';
 
 export const App = () => {
   return (

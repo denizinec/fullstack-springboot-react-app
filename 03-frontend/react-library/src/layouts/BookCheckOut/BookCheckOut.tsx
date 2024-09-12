@@ -80,6 +80,7 @@ export const BookCheckOut = () => {
                             <p className="lead">
                                 {book?.description}
                             </p>
+                            <StarsReview size={32} rating={1.5} />
                         </div>
                     </div>
                 </div>
@@ -98,7 +99,6 @@ export const BookCheckOut = () => {
                         <h2>{book?.title}</h2>
                         <h5 className="text-primary">{book?.author}</h5>
                         <p className="lead">{book?.description}</p>
-                        <StarsReview/>
                     </div>
                 </div>
             </div>
