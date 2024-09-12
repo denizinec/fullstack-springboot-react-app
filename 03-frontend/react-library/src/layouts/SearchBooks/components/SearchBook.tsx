@@ -43,7 +43,7 @@ export const SearchBook: React.FC<{ book: BookModel }> = (props) => {
 
                 </div>
                 <div className="col-md-4 d-flex justify-content-center align-items-center">
-                    <a className="btn btn-md main-color text-white" href="">
+                    <a className="btn btn-md main-color text-white" href="#">
                         Detayları Görüntüle
                     </a>
                 </div>

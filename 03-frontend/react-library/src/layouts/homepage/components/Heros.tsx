@@ -16,7 +16,7 @@ export const Heros = () => {
                                 İster yeni bir beceri öğrenmek, ister bir beceride kendinizi geliştirmek olsun,
                                 sizin için en iyi içeriği sağlamak istiyoruz!
                             </p>
-                            <a className="btn main-color btn-lg text-white" href="">Sign up</a>
+                            <a className="btn main-color btn-lg text-white" href="#">Sign up</a>
                         </div>
                     </div>
                 </div>
@@ -50,7 +50,7 @@ export const Heros = () => {
                                 İster yeni bir beceri öğrenmek, ister bir beceride kendinizi geliştirmek olsun,
                                 sizin için en iyi içeriği sağlamak istiyoruz!
                             </p>
-                            <a className="btn main-color btn-lg text-white" href="">Sign up</a>
+                            <a className="btn main-color btn-lg text-white" href="#">Sign up</a>
                         </div>
                     <div className="mt-2">
                         <div className="col-image-right"></div>

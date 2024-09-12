@@ -18,7 +18,7 @@ export const ReturnBook: React.FC<{book: BookModel}> = (props) => {
                                     
                                     <h6 className="mt-6">{props.book.title}</h6>
                                     <p>{props.book.author}</p>
-                                    <a className="btn main-color text-white" href="">Ayırt</a>
+                                    <a className="btn main-color text-white" href="#">Ayırt</a>
                                 </div>
                             </div>
 

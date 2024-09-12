@@ -25,7 +25,7 @@ export const Navbar = () => {
           </ul>
           <ul className='navbar-nav ms-auto'>
             <li className='nav-item m-1'>
-              <a className='btn btn-outline-light' type='button' href="">Kaydol</a>
+              <a className='btn btn-outline-light' type='button' href="#">Kaydol</a>
             </li>
           </ul>
        </div>

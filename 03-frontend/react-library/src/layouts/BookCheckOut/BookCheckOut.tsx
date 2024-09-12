@@ -98,7 +98,7 @@ export const BookCheckOut = () => {
                         <h2>{book?.title}</h2>
                         <h5 className="text-primary">{book?.author}</h5>
                         <p className="lead">{book?.description}</p>
-                        <StarsReview size={32} rating={4} />
+                        <StarsReview/>
                     </div>
                 </div>
             </div>

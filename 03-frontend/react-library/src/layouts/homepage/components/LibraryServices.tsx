@@ -10,7 +10,7 @@ export const LibraryServices = () => {
                         Eğer aradığınızı bulamıyorsanız, kütüphane yetkilisine özel mesajınızı atın!
                     </p>
                     <div className="d-grid gap-2 justify-content-md-start mb-4 mb-lg-3">
-                        <a className='btn main-color btn-lg text-white' href="">Kaydol</a>
+                        <a className='btn main-color btn-lg text-white' href="#">Kaydol</a>
                     </div>
                 </div>
                 <div className="col-lg-4 offset-lg-1 shadow-lg lost-image"></div>
