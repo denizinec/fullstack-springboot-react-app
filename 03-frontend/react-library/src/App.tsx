@@ -7,6 +7,7 @@ import { SearchBooks } from './layouts/SearchBooks/SearchBooks';
 import { Redirect, Route, Switch } from 'react-router-dom';
 import { BookCheckOut } from './layouts/BookCheckOut/BookCheckOut';
 import { StarsReview } from './layouts/utils/StarsReview';
+import { CheckoutAndReviewBox } from './layouts/BookCheckOut/CheckoutAndReviewBox';
 
 export const App = () => {
   return (
