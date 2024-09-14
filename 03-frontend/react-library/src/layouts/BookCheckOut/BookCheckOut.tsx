@@ -5,6 +5,7 @@ import { StarsReview } from "../utils/StarsReview";
 import { CheckoutAndReviewBox } from "./CheckoutAndReviewBox";
 import ReviewModel from "../../models/ReviewModel";
 import { error } from "console";
+import { LatestReviews } from "./LatestReviews";
 
 export const BookCheckOut = () => {
 
@@ -12,7 +13,7 @@ export const BookCheckOut = () => {
     const [isLoading, setIsLoading] = useState(true);
     const [httpError, setHttpError] = useState(null);
 
-    const [reviews, setReviews] = useState<ReviewModel[]>();
+    const [reviews, setReviews] = useState<ReviewModel[]>([]);
     const [totalStars, setTotalStars] = useState(0);
     const [isLoadingReview, setIsLoadingReview] = useState(true);
 
@@ -59,7 +60,7 @@ export const BookCheckOut = () => {
 
     useEffect(() => {
         const fetchBookReviews = async() => {
-            const reviewUrl: string = `http://localhost:8080/api/revies/search/findBookById?=bookId=${bookId}`;
+            const reviewUrl: string = `http://localhost:8080/api/reviews/search/findByBookId?bookId=${bookId}`;
 
             const responseReviews = await fetch(reviewUrl);
 
@@ -90,12 +91,10 @@ export const BookCheckOut = () => {
             }
 
             if (loadedReviews) {
-
-                const round = (Math.round((weightedStarReviews/loadedReviews.length) * 2) / 2).toFixed(1);
+                const round = (Math.round((weightedStarReviews / loadedReviews.length) * 2) / 2).toFixed(1);
                 setTotalStars(Number(round));
-
-                
             }
+
 
             setReviews(loadedReviews);
             setIsLoadingReview(false);
@@ -141,13 +140,14 @@ export const BookCheckOut = () => {
                             <p className="lead">
                                 {book?.description}
                             </p>
-                            <StarsReview size={32} rating={1.5} />
+                            <StarsReview size={32} rating={totalStars} />
                         </div>
                     </div>
                     <CheckoutAndReviewBox book={book} mobile={false}/>
                 </div>
                 
                 <hr />
+                <LatestReviews reviews={reviews} bookId={book?.id} mobile={false} />
                 
             </div>
             <div className="container d-lg-none mt-5">
@@ -163,11 +163,13 @@ export const BookCheckOut = () => {
                         <h2>{book?.title}</h2>
                         <h5 className="text-primary">{book?.author}</h5>
                         <p className="lead">{book?.description}</p>
-                        <StarsReview size={32} rating={3.5} />
+                        <StarsReview size={32} rating={totalStars} />
                     </div>
                 </div>
-                <hr />
                 <CheckoutAndReviewBox book={book} mobile={true}/>
+                <hr />
+                <LatestReviews reviews={reviews} bookId={book?.id} mobile={true} />
+            
             </div>
         </div>
     );
