@@ -58,3 +58,10 @@ background-color: #0e76a8 ;
     pointer-events: none;
     cursor: default;
  }
+
+.pf-pic {
+    width: 30px;
+    margin-right: 5px;
+    margin-bottom: 2px;
+    border-radius: 100%;
+}

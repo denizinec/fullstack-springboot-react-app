@@ -1,6 +1,14 @@
 import { NavLink } from "react-router-dom";
+import { LoginButton } from "../../Auth/components/LoginButton";
+import { LogoutButton } from "../../Auth/components/LogoutButton";
+import { useAuth0, User } from "@auth0/auth0-react";
 
 export const Navbar = () => {
+    const { user , isAuthenticated, isLoading } = useAuth0();
+
+    console.log("Is Loading?: ",isLoading);
+    console.log("User: ", user);
+    console.log("Is Authenticated?: ",isAuthenticated);
 
 
     return(
@@ -22,16 +30,31 @@ export const Navbar = () => {
             <li className='nav-item'>
               <NavLink className='nav-link' to="/search">Kitap Ara</NavLink>
             </li>
+            
           </ul>
-          <ul className='navbar-nav ms-auto'>
-            <li className='nav-item m-1'>
-              <a className='btn btn-outline-light' type='button' href="#">Kaydol</a>
-            </li>
+          <ul className="navbar-nav ms-auto">
+            {isAuthenticated && user ? (
+              <>
+                <li className="nav-item">
+                  <span className="navbar-text me-3">
+                    <img className="pf-pic" src={user.picture} alt={user.name} />
+                    {user.name || user.email}
+                  </span>
+                </li>
+                <li className="nav-item m-1">
+                  <LogoutButton />
+                </li>
+              </>
+            ) : (
+              <li className="nav-item m-1">
+                <LoginButton />
+              </li>
+            )}
           </ul>
        </div>
       </div>
     </nav>
-
+      
 
 
     );
