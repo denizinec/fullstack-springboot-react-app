@@ -14,8 +14,7 @@ export const App: React.FC = () => {
       <Navbar />
       <div className='flex-grow-1'>
       <Routes>
-        <Route path='/' element={<Homepage/>}>
-        </Route>
+        <Route path='/' element={<Homepage/>}/>
         <Route path='/home' element={<Homepage/>}/>
         <Route path='/search' element={<SearchBooks />}/>
         <Route path='/checkout/:bookId' element={<BookCheckOut/>} />
